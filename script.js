@@ -135,7 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
   animatedElements.forEach((element) => {
     observer.observe(element);
   });
-
   // =================================================================
   // 4. FUNGSI UNTUK MEMBUAT KARTU BISA DIKLIK
   // =================================================================
@@ -152,7 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 // =================================================================
 // PORTFOLIO PROJECT DATA
 // =================================================================
