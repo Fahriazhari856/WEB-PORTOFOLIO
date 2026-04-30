@@ -1,0 +1,92 @@
+/* 1. STYLE UNTUK HEADER / NAVBAR */
+header {
+  display: flex; /* Menggunakan Flexbox untuk tata letak */
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Memberi jarak antar elemen */
+  align-items: center; /* Menyelaraskan item secara vertikal */
+  padding: 15px 50px;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000; /* Pastikan header selalu di lapisan paling atas */
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  color: #007bff; /* Warna biru untuk ikon logo */
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none; /* Menghilangkan titik list */
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px; /* Jarak antar menu */
+}
+
+nav ul li a {
+  text-decoration: none; /* Menghilangkan garis bawah link */
+  color: #333;
+  font-weight: 500;
+  position: relative; /* Diperlukan untuk pseudo-element ::after */
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.contact-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px; /* Membuat sudut tombol melengkung */
+  text-decoration: none;
+  font-weight: 500;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* --- EFEK HOVER --- */
+nav ul li a:hover {
+  color: #007bff;
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Garis bawah muncul saat hover */
+}
+
+.contact-button:hover {
+  background-color: #0056b3; /* Warna biru lebih gelap */
+  transform: translateY(-2px); /* Tombol sedikit terangkat */
+}
+
+/* Efek hover untuk tombol kontak */
+.contact-button:hover {
+  background-color: #0056b3; /* Warna biru lebih gelap */
+  transform: translateY(-2px); /* Tombol sedikit terangkat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
